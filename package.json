@@ -56,8 +56,7 @@
           "publishCmd": "./gradlew publishToSonatype -Dorg.gradle.daemon=false -Pversion=${nextRelease.version} -PossSonatypeUsername=${process.env.OSS_SONATYPE_USERNAME} -PossSonatypePassword=${process.env.OSS_SONATYPE_PASSWORD} -Psigning.keyId=${process.env.SIGNING_KEY_ID} -Psigning.password=${process.env.SIGNING_PASSWORD} -Dorg.gradle.internal.publish.checksums.insecure=true"
         }
       ]
-    ],
-    "tagFormat": "${version}"
+    ]
   },
   "engines": {
     "node": "^12.12.0"
