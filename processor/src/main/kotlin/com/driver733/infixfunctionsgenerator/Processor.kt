@@ -14,7 +14,7 @@ import kotlin.reflect.jvm.internal.impl.name.FqName
 
 @AutoService(Processor::class)
 @SupportedSourceVersion(SourceVersion.RELEASE_11)
-@SupportedAnnotationTypes("com.driver733.infixfunctionsgenerator.GenerateInfix")
+@SupportedAnnotationTypes("com.driver733.infixfunctionsgenerator.Infix")
 @SupportedOptions(InfixAnnotationProcessor.KAPT_KOTLIN_GENERATED_OPTION_NAME)
 class InfixAnnotationProcessor : AbstractProcessor() {
 
@@ -27,7 +27,7 @@ class InfixAnnotationProcessor : AbstractProcessor() {
             generatedSourcesDirPath()
                     .also { if (it == null) return false }
                     .let { src ->
-                        env?.getElementsAnnotatedWith(GenerateInfix::class.java)?.forEach { method ->
+                        env?.getElementsAnnotatedWith(Infix::class.java)?.forEach { method ->
                             if (!process(method as ExecutableElement, env, src)) {
                                 return false
                             }
@@ -74,7 +74,7 @@ class InfixAnnotationProcessor : AbstractProcessor() {
                     }
 
     private fun infixMethodsNames(method: ExecutableElement, paramsCount: Int) =
-            method.getAnnotation(GenerateInfix::class.java)
+            method.getAnnotation(Infix::class.java)
                     .intermediateMethodsNames
                     .toList()
                     .let { infixFunsNames ->
@@ -178,7 +178,7 @@ class InfixAnnotationProcessor : AbstractProcessor() {
     }
 
     private fun customInitialMethodName(method: ExecutableElement) =
-            method.getAnnotation(GenerateInfix::class.java)
+            method.getAnnotation(Infix::class.java)
                     .firstMethodName
                     .let {
                         if (it.isEmpty()) null else it
