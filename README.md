@@ -12,7 +12,7 @@ For example, by annotating the `createBy` instance method with the `@GenerateInf
 ```kotlin
 class ClientService {
     // intermediate methods' names are customizable (default = "and")
-    @GenerateInfix("createWithName", "withAge", "andHeight") 
+    @GenerateInfix("createWithName", "age", "andHeight") 
     fun createBy(name: String, age: Int, height: Int) = "Carl"
 }
 ```
@@ -20,7 +20,7 @@ class ClientService {
 the `ClientService` can be used in a DSL fashion:
 
 ```kotlin
-clientService createWithName "Alex" withAge 23 andHeight 170
+clientService createWithName "Alex" age 23 andHeight 170
 ```
 
 Such notation adopts the codebase to the DDD, allowing reading the code as sentences in a context of the domain.
@@ -62,9 +62,7 @@ dependencies {
         implementation("com.driver733.infix-functions-generator:annotation:0.1.3")
         kapt("com.driver733.infix-functions-generator:processor:0.1.3")
     }
-    ```
-
-Also, make sure the 
+    ``` 
 
 #### Maven
 
