@@ -1,3 +1,5 @@
+## [1.0.1](https://github.com/driver733/infix-functions-generator/compare/1.0.0...1.0.1) (2020-05-10)
+
 # 1.0.0 (2020-05-09)
 
 
