@@ -41,8 +41,8 @@ Add this to your project's `build.gradle`:
 
 ```groovy
 dependencies {
-    implementation 'com.driver733.infix-functions-generator:annotation:0.1.3'
-    annotationProcessor 'com.driver733.infix-functions-generator:processor:0.1.3'
+    implementation 'com.driver733.infix-functions-generator:annotation:2.0.1'
+    annotationProcessor 'com.driver733.infix-functions-generator:processor:2.0.1'
 }
 ```
 
@@ -59,8 +59,8 @@ dependencies {
 
     ```kotlin
     dependencies {
-        implementation("com.driver733.infix-functions-generator:annotation:0.1.3")
-        kapt("com.driver733.infix-functions-generator:processor:0.1.3")
+        implementation("com.driver733.infix-functions-generator:annotation:2.0.1")
+        kapt("com.driver733.infix-functions-generator:processor:2.0.1")
     }
     ``` 
 
@@ -73,12 +73,12 @@ Add this to your project's `pom.xml`:
     <dependency>
       <groupId>com.driver733.infix-functions-generator</groupId>
       <artifactId>annotations</artifactId>
-      <version>0.1.3</version>
+      <version>2.0.1</version>
     </dependency>
     <dependency>
       <groupId>com.driver733.infix-functions-generator</groupId>
       <artifactId>processor</artifactId>
-      <version>0.1.3</version>
+      <version>2.0.1</version>
       <scope>provided</scope>
     </dependency>
 </dependencies>
