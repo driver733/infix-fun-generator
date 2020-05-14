@@ -1,3 +1,11 @@
+### [2.0.4](https://github.com/driver733/infix-functions-generator/compare/v2.0.3...v2.0.4) (2020-05-14)
+
+
+### Continuous Integration
+
+* release notes fix ([d71b4d5](https://github.com/driver733/infix-functions-generator/commit/d71b4d5e9c71067170f41138f7bdb66523b5013b))
+* release notes fix ([2a95425](https://github.com/driver733/infix-functions-generator/commit/2a95425c1244b8d543358860101eba728da035f8))
+
 ### [2.0.3](https://github.com/driver733/infix-functions-generator/compare/v2.0.2...v2.0.3) (2020-05-14)
 
 
