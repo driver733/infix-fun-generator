@@ -21,6 +21,7 @@ allprojects {
 
     nexusPublishing {
         repositories {
+            packageGroup.set("com.driver733")
             sonatype {
                 if (extra.has("ossSonatypeUsername")) {
                     username.set(extra["ossSonatypeUsername"] as String)
@@ -29,7 +30,6 @@ allprojects {
                     password.set(extra["ossSonatypePassword"] as String)
                 }
             }
-            packageGroup.set("com.driver733")
         }
     }
 
@@ -37,13 +37,15 @@ allprojects {
 
 
 nexusStaging {
+    packageGroup = "com.driver733"
+    numberOfRetries = 100
+    delayBetweenRetriesInMillis = 6000
     if (extra.has("ossSonatypeUsername")) {
         username = extra["ossSonatypeUsername"] as String
     }
     if (extra.has("ossSonatypePassword")) {
         password = extra["ossSonatypePassword"] as String
     }
-    packageGroup = "com.driver733"
 }
 
 subprojects.filter { it.name != "example" }.onEach {
