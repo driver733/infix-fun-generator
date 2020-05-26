@@ -1,9 +1,9 @@
 package com.driver733.infixfunctionsgenerator
 
-import com.memoizr.assertk.assert
 import createWithName
 import deleteByName
 import findByName
+import org.assertj.core.api.Assertions.assertThat
 import org.spekframework.spek2.Spek
 import org.spekframework.spek2.style.gherkin.Feature
 
@@ -18,7 +18,7 @@ object ClientServiceTest : Spek({
                 actual = clients findByName "Alice"
             }
             Then("infix fun result is equal to the normal fun call") {
-                assert that actual isEqualTo clients.findBy("Alice")
+                assertThat(actual).isEqualTo(clients.findBy("Alice"))
             }
         }
 
@@ -28,7 +28,7 @@ object ClientServiceTest : Spek({
                 actual = clients deleteByName "Bob" andAge 20
             }
             Then("infix fun result is equal to the normal fun call") {
-                assert that actual isEqualTo clients.deleteBy("Bob", 20)
+                assertThat(actual).isEqualTo(clients.deleteBy("Bob", 20))
             }
         }
 
@@ -38,7 +38,7 @@ object ClientServiceTest : Spek({
                 actual = clients createWithName "Carl" age 25 andHeight 170
             }
             Then("infix fun result is equal to the normal fun call") {
-                assert that actual isEqualTo clients.createBy("Carl", 25, 170)
+                assertThat(actual).isEqualTo(clients.createBy("Carl", 25, 170))
             }
         }
 

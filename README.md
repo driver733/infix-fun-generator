@@ -11,12 +11,12 @@ This project allows generating [infix](https://kotlinlang.org/docs/reference/fun
 [extension functions](https://kotlinlang.org/docs/reference/extensions.html#extension-functions)
 for instance methods with multiple parameters.
 
-For example, by annotating the `createBy` instance method with the `@GenerateInfix` annotation,
+For example, by annotating the `createBy` instance method with the `@Infix` annotation,
 
 ```kotlin
 class ClientService {
     // intermediate methods' names are customizable (default = "and")
-    @GenerateInfix("createWithName", "age", "andHeight") 
+    @Infix("createWithName", "age", "andHeight") 
     fun createBy(name: String, age: Int, height: Int) = "Carl"
 }
 ```

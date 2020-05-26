@@ -4,16 +4,12 @@ plugins {
 
 group = "com.driver733.infix-functions-generator"
 
-repositories {
-    maven(url = "https://jitpack.io")
-}
-
 dependencies {
     implementation(project(":annotations"))
     implementation(project(":annotations"))
     kapt(project(":processor"))
 
-    testImplementation( "com.github.driver733:assertk-core:deps~update-libs-SNAPSHOT")
+    testCompile("org.assertj:assertj-core:3.11.1")
     testImplementation("org.spekframework.spek2:spek-dsl-jvm:2.0.9")
     testRuntimeOnly("org.spekframework.spek2:spek-runtime-jvm:2.0.9")
 }
